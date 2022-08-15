@@ -1,0 +1,7 @@
+requests
+apache-airflow-providers-amazon==2.4.0
+PyYAML
+great_expectations
+airflow-provider-great-expectations
+numpy==1.17.0
+pandas

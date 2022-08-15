@@ -10,8 +10,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 USER airflow
-RUN pip install --no-cache-dir \
-    great_expectations \
-    airflow-provider-great-expectations \
-    PyYAML \
-    apache-airflow-providers-amazon==2.4.0
+
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install numpy==1.17.0 \
+    && pip install -r requirements.txt
